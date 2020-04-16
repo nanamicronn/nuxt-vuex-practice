@@ -1,6 +1,9 @@
-# life-company
+# Welcome to spotwrite-admin project!
+> Admin front end for spotwrite project
 
-> Companies front end for this project
+本リポジトリの公用語は英語です。プログラム内のコメントやコミットメッセージは英語で統一してください
+
+This repository official language is English. We should write comments and commit messages for English.
 
 ## Build Setup
 
@@ -18,5 +21,3 @@ $ yarn start
 # generate static project
 $ yarn generate
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
