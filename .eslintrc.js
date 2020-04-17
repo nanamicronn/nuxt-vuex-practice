@@ -9,20 +9,21 @@ module.exports = {
     'prettier',
     'prettier/vue',
     'plugin:prettier/recommended',
-    'plugin:nuxt/recommended'
+    'plugin:nuxt/recommended',
+    "airbnb-base"
   ],
   plugins: [
     'prettier'
   ],
-  // add your custom rules here
   rules: {
     "prettier/prettier": [
       "error",
       {
-        "semi": false,
         "arrowParens": "always",
-        "singleQuote": true
+        "singleQuote": true,
+        "trailingComma": "es5"
       }
-    ]
-  }
+    ],
+    "import/no-unresolved": "off",
+  },
 }

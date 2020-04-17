@@ -18,17 +18,18 @@
 </template>
 
 <script lang="ts">
+// eslint-disable-next-line import/no-extraneous-dependencies
 import Vue from 'vue';
 import Logo from '~/components/Logo.vue';
-import { ApiTest } from '~/libs/api';
+import { ApiTest } from '~/libs/api/index.ts';
 
 export default Vue.extend({
   components: {
-    Logo
+    Logo,
   },
   data() {
     return {
-      test: 0 as number
+      test: 0 as number,
     };
   },
   methods: {
@@ -42,8 +43,8 @@ export default Vue.extend({
         // eslint-disable-next-line no-console
         console.error(error);
       }
-    }
-  }
+    },
+  },
 });
 </script>
 
