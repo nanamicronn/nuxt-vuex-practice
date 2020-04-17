@@ -1,9 +1,10 @@
 {
-  "name": "life-company",
+  "name": "spotwrite-admin",
   "version": "1.0.0",
-  "description": "Companies front end for this project",
+  "description": "Administrator front end for this project",
   "author": "Tetsuhiro Nakanishi",
   "private": true,
+  "node": "12",
   "scripts": {
     "dev": "nuxt-ts",
     "build": "nuxt-ts build",

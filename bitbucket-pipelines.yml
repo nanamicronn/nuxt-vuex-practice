@@ -1,0 +1,40 @@
+image: node:12-alpine
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - node
+        name: Build and test
+        script:
+          - echo "working on master branch."
+          - apk update
+          - yarn install
+          - yarn run lint
+          - yarn run lint:style
+          - yarn run test:unit
+          - echo "Everything is awesome!"
+  tags:                         # add the 'tags' section
+    release-*:                  # specify the tag
+      - step:                   # define the build pipeline for the tag
+          name: Build and release
+          script:
+            - echo "working on master branch."
+            - apk update
+            - yarn install
+            - yarn run lint
+            - yarn run lint:style
+            - yarn run test:unit
+            - echo "Everything is awesome!"
+  branches:
+    staging:
+      - step:
+          name: Clone
+          script:
+            - echo "working on master branch."
+            - apk update
+            - yarn install
+            - yarn run lint
+            - yarn run lint:style
+            - yarn run test:unit
+            - echo "Everything is awesome!"
