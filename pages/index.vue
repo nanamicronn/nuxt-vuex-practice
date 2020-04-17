@@ -9,30 +9,42 @@
         Companies front end for this project
       </h2>
       <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+        <button class="button--green" @click="onSubmit">
+          API Test
+        </button>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import Logo from '~/components/Logo.vue'
+import Vue from 'vue';
+import Logo from '~/components/Logo.vue';
+import { ApiTest } from '~/libs/api';
 
 export default Vue.extend({
   components: {
     Logo
+  },
+  data() {
+    return {
+      test: 0 as number
+    };
+  },
+  methods: {
+    async onSubmit() {
+      try {
+        const res = await ApiTest();
+        this.test = res.status;
+        // eslint-disable-next-line no-console
+        console.log(res);
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.error(error);
+      }
+    }
   }
-})
+});
 </script>
 
 <style>
