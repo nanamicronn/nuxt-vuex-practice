@@ -2,7 +2,7 @@
   <H1 class="title">Hi!</H1>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .title {
   color: green;
 }

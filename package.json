@@ -11,8 +11,8 @@
     "start": "nuxt-ts start",
     "lint": "eslint --ext .ts,.js,.vue --ignore-path .gitignore .",
     "lint:fix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
-    "lint:style": "stylelint './**/*.vue' --syntax scss",
-    "lint:style:fix": "stylelint './**/*.vue' --syntax scss --fix",
+    "lint:style": "stylelint './**/*.vue'",
+    "lint:style:fix": "stylelint './**/*.vue' --fix",
     "test": "jest"
   },
   "dependencies": {
