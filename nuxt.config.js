@@ -33,17 +33,14 @@ export default {
    */
   buildModules: [
     '@nuxt/typescript-build',
-    // Doc: https://github.com/nuxt-community/stylelint-module
-    '@nuxtjs/stylelint-module',
+    '@nuxtjs/stylelint-module', // Doc: https://github.com/nuxt-community/stylelint-module
   ],
   /*
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
-    // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv',
+    '@nuxtjs/axios', // Doc: https://axios.nuxtjs.org/usage
+    '@nuxtjs/dotenv', // Doc: https://github.com/nuxt-community/dotenv-module
   ],
   /*
    ** Axios module configuration
