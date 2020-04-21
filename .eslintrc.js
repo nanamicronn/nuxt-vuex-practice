@@ -4,25 +4,28 @@ module.exports = {
     browser: true,
     node: true
   },
+  parser: "vue-eslint-parser",
+  parserOptions: {
+    parser: "@typescript-eslint/parser"
+  },
   extends: [
     '@nuxtjs/eslint-config-typescript',
     'prettier',
     'prettier/vue',
     'plugin:prettier/recommended',
-    'plugin:nuxt/recommended'
+    'plugin:nuxt/recommended',
+    'airbnb-base',
+    'eslint-config-prettier' // Resolves ESLint and Prettier conflicts
   ],
-  plugins: [
-    'prettier'
-  ],
-  // add your custom rules here
   rules: {
-    "prettier/prettier": [
-      "error",
+    'prettier/prettier': [
+      'error',
       {
-        "semi": false,
-        "arrowParens": "always",
-        "singleQuote": true
+        'arrowParens': 'always',
+        'singleQuote': true,
+        'trailingComma': 'es5'
       }
-    ]
-  }
+    ],
+    'import/no-unresolved': 'off',
+  },
 }
