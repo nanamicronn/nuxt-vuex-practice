@@ -12,8 +12,8 @@
     "start": "nuxt-ts start",
     "lint": "eslint --ext .ts,.js,.vue --ignore-path .gitignore .",
     "lint:fix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
-    "lint:style": "stylelint './**/*.vue'",
-    "lint:style:fix": "stylelint './**/*.vue' --fix",
+    "lint:style": "stylelint './assets/*.{vue,scss}' './components/*.{vue,scss}' './pages/*.{vue,scss}'",
+    "lint:style:fix": "stylelint './assets/*.{vue,scss}' './components/*.{vue,scss}' './pages/*.{vue,scss}' --fix",
     "test": "jest"
   },
   "dependencies": {
