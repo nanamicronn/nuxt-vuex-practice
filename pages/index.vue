@@ -18,17 +18,18 @@
 </template>
 
 <script lang="ts">
+// eslint-disable-next-line import/no-extraneous-dependencies
 import Vue from 'vue';
 import Logo from '~/components/Logo.vue';
-import { ApiTest } from '~/libs/api';
+import { ApiTest } from '~/libs/api/index.ts';
 
 export default Vue.extend({
   components: {
-    Logo
+    Logo,
   },
   data() {
     return {
-      test: 0 as number
+      test: 0 as number,
     };
   },
   methods: {
@@ -42,12 +43,12 @@ export default Vue.extend({
         // eslint-disable-next-line no-console
         console.error(error);
       }
-    }
-  }
+    },
+  },
 });
 </script>
 
-<style>
+<style lang="scss" scoped>
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -58,8 +59,16 @@ export default Vue.extend({
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family:
+    'Quicksand',
+    'Source Sans Pro',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
