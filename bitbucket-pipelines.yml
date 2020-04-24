@@ -1,0 +1,15 @@
+image: node:12-alpine
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - node
+        name: Build and test
+        script:
+          - echo "working on master branch."
+          - apk update
+          - yarn install
+          - yarn run lint
+          - yarn run lint:style
+          - echo "Everything is awesome!"
