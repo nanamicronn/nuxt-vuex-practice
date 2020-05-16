@@ -1,5 +1,4 @@
-# Welcome to spotwrite-admin project!
-> Admin front end for spotwrite project
+# Welcome to nuxt-vue-practice project!
 
 本リポジトリの公用語は英語です。プログラム内のコメントやコミットメッセージは英語で統一してください
 

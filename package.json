@@ -1,8 +1,8 @@
 {
-  "name": "spotwrite-admin",
+  "name": "nuxt-vue-practice",
   "version": "1.0.0",
   "description": "Administrator front end for this project",
-  "author": "Tetsuhiro Nakanishi",
+  "author": "micronn",
   "private": true,
   "node": "12",
   "scripts": {
